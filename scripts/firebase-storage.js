@@ -22,7 +22,7 @@
         var uploadTask = storageRef.put(file);
 
         //upload progress bar
-        uploadProgress.classList.remove('hide');
+        uploadProgress.classList.remove('hidden');
         uploadTask.on('state_changed', 
             snap => {                
                 var percentage = (snap.bytesTransferred / snap.totalBytes) * 100;
@@ -32,7 +32,7 @@
                 console.log(err);
             },
             () => {
-                uploadProgress.classList.add('hide');
+                uploadProgress.classList.add('hidden');
                 fileUpload.value = '';                
                 loadImage(filePath);
             }

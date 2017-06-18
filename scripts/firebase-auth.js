@@ -110,13 +110,13 @@
                         // you have one. Use User.getToken() instead.
         console.log(firebaseUser);  
         console.log(name, email, photoUrl, emailVerified, token);  
-        btnLogin.classList.add('hide'); 
-        btnLogout.classList.remove('hide');    
+        btnLogin.classList.add('hidden'); 
+        btnLogout.classList.remove('hidden');    
       }
       else {
         console.log('not logged in');
-        btnLogin.classList.remove('hide');
-        btnLogout.classList.add('hide');        
+        btnLogin.classList.remove('hidden');
+        btnLogout.classList.add('hidden');        
       }
   });
 
