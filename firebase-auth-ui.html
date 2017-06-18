@@ -14,26 +14,36 @@
             <div id="loading">Loading...</div>
             <div id="loaded" class="hidden">
                 <div id="main">
-                <div id="user-signed-out" class="hidden">
-                    <h4>You are signed out.</h4>   
-                    <div id="firebaseui-container"></div>
-                </div>
+                    <div id="user-signed-out" class="hidden">
+                        <h4>You are signed out.</h4>   
+                        <div id="firebaseui-container"></div>
+                    </div>
 
-                <div id="user-signed-in" class="hidden">
-                    <div id="user-info">
-                    <div id="photo-container">
-                        <img id="photo">
-                    </div>
-                    <div id="name"></div>
-                    <div id="email"></div>
-                    <div id="phone"></div>
-                    <div class="clearfix"></div>
-                    </div>
-                    <p>
-                    <button id="sign-out">Sign Out</button>
-                    <button id="delete-account">Delete account</button>
-                    </p>
-                </div>          
+                    <div id="user-signed-in" class="hidden">
+                        <div id="user-info">
+                        <div id="photo-container">
+                            <img id="photo">
+                        </div>
+                        <div id="name"></div>
+                        <div id="email"></div>
+                        <div id="phone"></div>
+                        <div class="clearfix"></div>
+                        </div>
+                        <p>
+                        <button id="sign-out">Sign Out</button>
+                        <button id="update-profile">Update Profile</button>
+                        <button id="delete-account">Delete account</button>
+                        </p>
+                    </div>  
+
+                    <div id="user-update-form" class="hidden">        
+                        <form>
+                            First name:<br>
+                            <input type="text" id="firstname">
+                            <br><br>
+                            <input id="submit-profile-update" type="submit" value="Submit">
+                        </form> 
+                    <div>
                 </div>
             </div>
         </div>

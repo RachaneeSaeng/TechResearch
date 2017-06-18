@@ -91,7 +91,37 @@
       });
     };
 
+    var displayUpdatePanel = function(isShow) {
+      if (isShow) {
+          document.getElementById('user-update-form').classList.remove('hidden');
+      }
+      else {
+        document.getElementById('user-update-form').classList.add('hidden');
+      }
+    };
+
+    var updateProfile = function() {
+      var nameValue = document.getElementById("firstname").value;
+      var user = firebase.auth().currentUser;
+
+      user.updateProfile({
+        displayName: nameValue
+      }).then(function() {
+        displayUpdatePanel(false);
+      }, function(error) {
+        console.log(error);
+      });
+
+      // user.updateEmail("user@example.com").then(function() {
+      //   // Update successful.
+      // }, function(error) {
+      //   // An error happened.
+      // });
+    };
+
     document.getElementById('sign-out').addEventListener('click', signOut);
+    document.getElementById('update-profile').addEventListener('click', displayUpdatePanel(true));
+    document.getElementById('submit-profile-update').addEventListener('click', updateProfile);
     document.getElementById('delete-account').addEventListener('click', deleteAccount);
 
 }());
