@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Facebook Login JavaScript Example</title>
+        <meta charset="UTF-8">
+        <meta property="fb:app_id" content="438003669904414" />
+        <meta property="og:url" content="http://localhost:8087/facebook-social.html" />
+        <meta property="og:type"          content="article" />
+        <meta property="og:title"         content="Your Website Title" />
+        <meta property="og:description"   content="Your description" />
+        <meta property="og:image"         content="http://127.0.0.1:8087/images/anonymous-avatar.png" />        
+    </head>
+    <body>        
+        <div id="fb-root"></div>
+        <script>(function(doc, scriptTag, id) {
+                var js, fjs = doc.getElementsByTagName(scriptTag)[0];
+                if (doc.getElementById(id)) return;
+                js = doc.createElement(scriptTag); 
+                js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9&appId=438003669904414";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+
+        <p>
+            This is an example article
+            .....
+            ......
+            ......
+            ......
+            <br/>
+            <br/>
+        </p>
+        <div>
+            <div class="fb-like" data-href="http://localhost:8087/facebook-social.html" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+        </div>
+        <div>
+            <div class="fb-comments" data-href="http://localhost:8087/facebook-social.html" data-numposts="10" data-order-by="time"></div>
+        </div>
+    </body>
+</html>
